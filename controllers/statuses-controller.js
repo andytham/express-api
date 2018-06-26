@@ -2,6 +2,16 @@ const Status = require('../models/Status');
 
 const statusesController = {};
 
+statusesController.index = (req, res) => {
+	Status.findAll()
+	.then(statuses => {
+		res.json(statuses);
+	})
+	.catch(err => {
+		console.log(err);
+	})
+}
+
 statusesController.show = (req, res) => {
 	Status.findByNickname(req.params.nickname)
 	.then(status => {
@@ -19,7 +29,8 @@ statusesController.create = (req, res) => {
 	})
 	.then(status => {
 		res.json({
-			message: "user status created"
+			message: "user status created",
+			data: status
 		})
 	})
 	.catch(err => {

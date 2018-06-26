@@ -6,9 +6,9 @@ app.use(express.static(www));
 console.log(`serving ${www}`);
 
 
-app.get('*', (req, res) => {
-	res.sendFile(`index.html`, { root: www });
-});
+// app.get('*', (req, res) => {
+// 	res.sendFile(`index.html`, { root: www });
+// });
 
 //chat.andytham.com
 const historyRoutes = require('./routes/history-route');

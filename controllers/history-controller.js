@@ -11,6 +11,7 @@ historyController.index = (req, res) => {
 		console.log(err);
 		res.status(500).json({err})
 	})
+}
 
 	historyController.create = (req, res) => {
 		History.create({
@@ -29,6 +30,6 @@ historyController.index = (req, res) => {
 		})
 	}
 
-}
+
 
 module.exports = historyController;
