@@ -39,6 +39,7 @@ statusesController.create = (req, res) => {
 }
 
 statusesController.update = (req, res) => {
+	console.log(req);
 	Status.update({
 		status: req.body.status
 	}, req.params.nickname)

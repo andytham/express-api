@@ -14,6 +14,7 @@ historyController.index = (req, res) => {
 }
 
 	historyController.create = (req, res) => {
+		console.log(req.body);
 		History.create({
 			usr: req.body.usr,
 			msg: req.body.msg,

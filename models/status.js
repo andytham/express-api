@@ -38,7 +38,7 @@ Status.update = (status, nickname) => {
 			status = $1
 		WHERE nickname = $2
 		`,
-		[status.status, status.nickname]
+		[status.status, nickname]
 	);
 };
 
