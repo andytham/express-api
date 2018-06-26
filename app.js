@@ -10,5 +10,10 @@ app.get('*', (req, res) => {
 	res.sendFile(`index.html`, { root: www });
 });
 
+//chat.andytham.com
+const historyRoutes = require('./routes/history-route');
+const statusesRoutes = require('./routes/statuses-route');
+app.use('/api/history', historyRoutes);
+app.use('/api/statuses', statusesRoutes);
 
 app.listen(port, () => console.log(`listening on http://localhost:${port}`));
