@@ -11,9 +11,9 @@ app.use(bodyParser.urlencoded({
   extended: false
 }))
 
-// app.get('*', (req, res) => {
-// 	res.sendFile(`index.html`, { root: www });
-// });
+app.get('/', (req, res) => {
+	res.sendFile(`index.html`, { root: www });
+});
 
 // CORS
 app.use(function(req, res, next) {
